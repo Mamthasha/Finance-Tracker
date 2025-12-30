@@ -1,4 +1,3 @@
-// src/index.js
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -10,9 +9,11 @@ import { TransactionProvider } from './contexts/TransactionContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <BrowserRouter>
-    <TransactionProvider>
-      <App />
-    </TransactionProvider>
-  </BrowserRouter>
+  <React.StrictMode>
+    <BrowserRouter>
+      <TransactionProvider>
+        <App />
+      </TransactionProvider>
+    </BrowserRouter>
+  </React.StrictMode>
 );

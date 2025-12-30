@@ -1,0 +1,99 @@
+/* src/components/Header/Header.css */
+.header-navbar {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 1rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.header-brand:hover {
+  color: white;
+  opacity: 0.9;
+}
+
+.header-logo {
+  font-size: 1.8rem;
+}
+
+.header-title {
+  font-size: 1.5rem;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-email-badge {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.logout-btn {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.9rem;
+  border-radius: 20px;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.auth-buttons .btn {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.9rem;
+  border-radius: 20px;
+}
+
+.dark-mode-switch .form-check-input {
+  width: 3rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+.dark-mode-switch .form-check-label {
+  color: white;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .header-navbar .container-fluid {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .header-controls {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .header-brand {
+    font-size: 1.3rem;
+  }
+}

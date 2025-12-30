@@ -1,0 +1,165 @@
+/* src/components/BudgetBox/BudgetBox.css */
+.budget-box-card {
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  margin-bottom: 1.5rem;
+}
+
+.budget-box-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.budget-box-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.budget-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.budget-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  height: 100%;
+  background: white;
+}
+
+.dark-mode .budget-card {
+  background-color: #2d2d2d;
+  border-color: #444;
+}
+
+.budget-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.budget-card-body {
+  padding: 15px;
+}
+
+.budget-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.budget-card-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0;
+  color: #333;
+}
+
+.dark-mode .budget-card-title {
+  color: #e0e0e0;
+}
+
+.overspent-badge {
+  background-color: #dc3545;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.budget-progress {
+  margin-bottom: 12px;
+}
+
+.budget-progress-bar {
+  height: 8px;
+  background-color: #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.dark-mode .budget-progress-bar {
+  background-color: #444;
+}
+
+.budget-progress-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.budget-progress-fill.good {
+  background-color: #28a745;
+}
+
+.budget-progress-fill.warning {
+  background-color: #ffc107;
+}
+
+.budget-progress-fill.danger {
+  background-color: #dc3545;
+}
+
+.budget-stats {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.dark-mode .budget-stats {
+  color: #a0a0a0;
+}
+
+.budget-spent {
+  font-weight: 600;
+}
+
+.budget-total {
+  font-weight: 500;
+}
+
+.budget-input {
+  width: 100%;
+}
+
+.budget-input .form-control {
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  border: 1px solid #dee2e6;
+}
+
+.dark-mode .budget-input .form-control {
+  background-color: #1e1e1e;
+  border-color: #444;
+  color: #e0e0e0;
+}
+
+.dark-mode .budget-input .form-control:focus {
+  background-color: #1e1e1e;
+  border-color: #0d6efd;
+  color: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+  .budget-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .budget-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .budget-box-title {
+    font-size: 1.3rem;
+  }
+}

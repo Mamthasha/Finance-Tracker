@@ -1,21 +1,20 @@
-// src/App.js
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Dashboard from "./Dashboard";
-import Login from "./Login";
-import Signup from "./Signup";
+import DashboardPage from "./components/Dashboard/Dashboard";
+import Login from "./components/Auth/Login";
+import Signup from "./components/Auth/Signup";
+import PrivacyPolicy from "./components/Footer/PrivacyPolicy";
+import TermsOfService from "./components/Footer/TermsOfService";
 import "./App.css";
 
-function App() {
+export default function App() {
   return (
-    <div className="app-container">
-      <Routes>
-        <Route path="/" element={<Dashboard />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-      </Routes>
-    </div>
+    <Routes>
+      <Route path="/" element={<DashboardPage />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/privacy" element={<PrivacyPolicy />} />
+      <Route path="/terms" element={<TermsOfService />} />
+    </Routes>
   );
 }
-
-export default App;

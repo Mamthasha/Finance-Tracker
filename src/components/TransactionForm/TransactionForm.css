@@ -1,0 +1,111 @@
+/* src/components/TransactionForm/TransactionForm.css */
+.transaction-form-card {
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.transaction-form-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.transaction-form-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.transaction-form-subtitle {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.transaction-form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  align-items: start;
+}
+
+.transaction-form-grid .form-control,
+.transaction-form-grid .form-select {
+  border-radius: 8px;
+  border: 2px solid #e0e0e0;
+  padding: 10px 12px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.transaction-form-grid .form-control:focus,
+.transaction-form-grid .form-select:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.transaction-type-group {
+  display: flex;
+  gap: 10px;
+  height: 45px;
+}
+
+.transaction-type-group .btn {
+  flex: 1;
+  font-weight: 500;
+  padding: 8px 12px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.transaction-type-group .btn-check:checked + .btn {
+  font-weight: 600;
+}
+
+.btn-check:checked + .btn-outline-success {
+  background-color: #198754;
+  color: white;
+}
+
+.btn-check:checked + .btn-outline-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.transaction-submit-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  height: 45px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.transaction-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(102, 126, 234, 0.3);
+}
+
+.transaction-submit-btn:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .transaction-form-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .transaction-type-group {
+    height: auto;
+    flex-direction: column;
+  }
+  
+  .transaction-form-title {
+    font-size: 1.3rem;
+  }
+}
