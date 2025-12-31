@@ -10,7 +10,7 @@ import { TransactionProvider } from './contexts/TransactionContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <BrowserRouter>
+  <BrowserRouter basename="/Finance-Tracker">
     <TransactionProvider>
       <App />
     </TransactionProvider>

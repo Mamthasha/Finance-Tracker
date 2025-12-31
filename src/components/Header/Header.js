@@ -10,14 +10,14 @@ export default function Header(){
       <div className="container-fluid">
         <div>
           <h1 className="navbar-brand mb-0 h1 d-flex align-items-center">
-            {/* YOUR LOGO - Replace shield icon with your PNG */}
+            {/* LOGO */}
             <img 
-              src="/logo/cashsanctum-logo.png" 
+              src={process.env.PUBLIC_URL + "/logo/cashsanctum.png"}
               alt="CashSanctum Logo" 
               width="40" 
               height="40"
               className="me-2 rounded"
-              style={{ objectFit: 'contain' }}
+              style={{ objectFit: "contain" }}
             />
             
             <div className="d-flex flex-column">
@@ -58,7 +58,7 @@ export default function Header(){
               id="darkModeSwitch" 
               checked={darkMode} 
               onChange={() => setDarkMode(!darkMode)} 
-             />
+            />
             <label className="form-check-label text-white" htmlFor="darkModeSwitch">
               {darkMode ? "🌙 Dark" : "☀️ Light"}
             </label>
